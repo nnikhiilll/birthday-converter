@@ -1,0 +1,47 @@
+monthToString = {
+  1: "January",
+  2: "February",
+  3: "March",
+  4: "April",
+  5: "May",
+  6: "June",
+  7: "July",
+  8: "August",
+  9: "September",
+  10: "October",
+  11: "November",
+  12: "December"
+}
+
+daySuffix = {
+  0: "th",
+  1: "st",
+  2: "nd",
+  3: "rd",
+  4: "th",
+  5: "th",
+  6: "th",
+  7: "th",
+  8: "th",
+  9: "th"
+}
+
+user=input("Enter your birthday in the form'mm/dd/yyyy': ")
+mm=10*int(user[0])+int(user[1])
+
+
+dd=10*int(user[3])+int(user[4])
+
+yyyy=1000*int(user[6])+100*int(user[7])+10*int(user[8])+int(user[9])
+
+month=monthToString[mm] 
+
+day=str(dd)+daySuffix[dd%10]
+
+print("You were born on "+month+" "+day+", "+str(yyyy))
+
+
+
+
+
+
